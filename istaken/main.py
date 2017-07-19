@@ -6,7 +6,7 @@ def is_taken(package_name):
     url = 'https://pypi.python.org/pypi/{0}'.format(package_name)
 
     try:
-        with urllib.request.urlopen(url) as file:
+        with urllib.request.urlopen(url):
             return True
     except urllib.error.HTTPError as http_error:
         if http_error.code == 404:

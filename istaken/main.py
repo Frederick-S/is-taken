@@ -17,9 +17,11 @@ def is_taken(package_name):
             sys.exit(1)
 
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) == 1:
         print("Usage: is-taken package-name")
+
+        return
 
     package_name = sys.argv[1]
 
@@ -27,3 +29,6 @@ if __name__ == '__main__':
         print("%s is taken" % package_name)
     else:
         print("%s is free to use" % package_name)
+
+if __name__ == '__main__':
+    main()

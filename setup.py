@@ -2,8 +2,13 @@ from setuptools import setup
 
 setup(
     name='is-taken',
-    version='0.1',
-    scripts=['is_takey.py'],
+    packages=['istaken'],
+    version='0.1.4',
+    entry_points={
+        'console_scripts': [
+            'is-taken = istaken.main:main'
+        ]
+    },
     description='Check if a PyPI package name is taken.',
     url='https://github.com/Frederick-S/is-taken'
 )

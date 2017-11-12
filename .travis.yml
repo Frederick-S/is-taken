@@ -9,6 +9,6 @@ install:
   - pip install codecov
 script:
   - pycodestyle .
-  - coverage run --source=douban_rating setup.py test
+  - coverage run --source=istaken setup.py test
 after_success:
   - codecov

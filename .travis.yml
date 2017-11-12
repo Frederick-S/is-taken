@@ -5,6 +5,10 @@ python:
   - 3.5
   - 3.6
 install:
-  - pip install pep8
+  - pip install pycodestyle
+  - pip install codecov
 script:
-  - pep8 .
+  - pycodestyle .
+  - coverage run --source=douban_rating setup.py test
+after_success:
+  - codecov
